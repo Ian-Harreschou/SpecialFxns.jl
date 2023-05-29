@@ -3,13 +3,14 @@
 using SpecialFxns
 using Test
 
-
-my_other_fxn(1,2) # --> method #1, with new REPL this will not be recognized
-# SpecialFxns.my_other_fxn(1,2) # --> method #2, `my_other_fxn` LIVES inside of the package. Inside the package, we added `included_pkg.jl`, which contains our function
-
+# 3x + y
+# my_fxn(1,2)| # --> method #1, with new REPL this will not be recognized
+SpecialFxns.my_other_fxn(1,2) # --> method #2, `my_other_fxn` LIVES inside of the package. Inside the package, we added `included_pkg.jl`, which contains our function
 
 @testset "SpecialFxns.jl" begin
 
-    my_other_fxn(1,2)
+    # 3x + y
+    @test my_fxn(1,2) == 5
+    @test my_fxn(9,4) == 13
 
 end
