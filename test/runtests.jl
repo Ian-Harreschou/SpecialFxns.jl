@@ -14,5 +14,6 @@ SpecialFxns.SPECIAL_FXN() # this function didn't use `export` so we have to call
     # 3x + y
     @test my_fxn(1,2) == 5
     @test my_fxn(9,4) == 31
+    @test my_fxn(4,3) == 15
 
 end
