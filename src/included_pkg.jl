@@ -3,6 +3,8 @@ my_fxn(x,y) = 3x+y
 
 second_fxn(x,y,z) = 2x + 3y + 7z
 
+d_my_fxn(x,y) = ForwardDiff.derivative()
+
 # cmd = `$(Base.julia_cmd()) --startup-file=no -e "println(@isdefined SpecialFxns)"`
 # run(cmd);
 

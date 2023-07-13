@@ -3,8 +3,12 @@ uuid = "b2636ea5-33c8-40c0-99e8-0b7ea2db03ca"
 authors = ["Ian-Harreschou <harresci@oregonstate.edu> and contributors"]
 version = "1.0.0-DEV"
 
+[deps]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+
 [compat]
 julia = "1"
+ForwardDiff = "0.10.35"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
