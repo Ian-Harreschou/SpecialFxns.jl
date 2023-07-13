@@ -2,8 +2,8 @@
 my_fxn(x,y) = 3x+y
 
 
-cmd = `$(Base.julia_cmd()) --startup-file=no -e "println(@isdefined SpecialFxns)"`
-run(cmd);
+# cmd = `$(Base.julia_cmd()) --startup-file=no -e "println(@isdefined SpecialFxns)"`
+# run(cmd);
 
-cmd = `$(Base.julia_cmd()) --startup-file=yes -e "println(@isdefined SpecialFxns)"`
-run(cmd);
+# cmd = `$(Base.julia_cmd()) --startup-file=yes -e "println(@isdefined SpecialFxns)"`
+# run(cmd);

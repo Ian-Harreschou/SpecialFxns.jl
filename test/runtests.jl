@@ -4,13 +4,15 @@ using SpecialFxns
 using Test
 
 # 3x + y
-# my_fxn(1,2)| # --> method #1, with new REPL this will not be recognized
-SpecialFxns.my_other_fxn(1,2) # --> method #2, `my_other_fxn` LIVES inside of the package. Inside the package, we added `included_pkg.jl`, which contains our function
+my_fxn(1,2) # --> method #1, with new REPL this will not be recognized
+SpecialFxns.my_fxn(1,2) # --> method #2, `my_other_fxn` LIVES inside of the package. Inside the package, we added `included_pkg.jl`, which contains our function
+
+SpecialFxns.SPECIAL_FXN() # this function didn't use `export` so we have to call it through this method
 
 @testset "SpecialFxns.jl" begin
 
     # 3x + y
     @test my_fxn(1,2) == 5
-    @test my_fxn(9,4) == 13
+    @test my_fxn(9,4) == 31
 
 end
