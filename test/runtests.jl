@@ -1,7 +1,9 @@
 # here is some space where we can enter in our tests, so that we can ensure functions from the modules have their proper "scope"
 # if we start a brand new Julia REPL (Alt + J, Alt + R) then we can see that the function is not defined. That's because we didn't EXPORT the function from its code
-using SpecialFxns
+using SpecialFxns 
 using Test
+
+d_my_fxn(3,1)
 
 # 3x + y
 my_fxn(1,2) # --> method #1, with new REPL this will not be recognized
