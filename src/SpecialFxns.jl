@@ -8,6 +8,6 @@ using ForwardDiff # here we can list other packages that we need in using `Speci
 
 include("included_pkg.jl") # let's add in another file, from which we can pull functions
 
-export my_fxn, second_fxn, d_my_fxn # --> this is how you make the function available for anyone that installs the package with `using [Module]`
+export legendre_Pn # --> this is how you make the function available for anyone that installs the package with `using [Module]`
                         # try to only export functions you want publicly available, but either way someone can just `import SpecialFxns.jl` to get the functions they want 
 end
