@@ -34,15 +34,15 @@ function legendre_Pn(x::Float64,n::Int)
             Pf = (2 * k - 1.0) / k * x * P₁(x) - (k - 1.0)/k*P₀(x)
         PN[k] = Pf
 
-        if abs(x) == 1.0
-                PD[k] = 1/2 * x ^ (k + 1.0) * k * (k + 1.0)
-        else
-            PD[k] = (k / (1.0 - x^2)) * (P₁ - x*Pf)
-        
-        P₀ = P₁
-        P₁ = Pf
+            if abs(x) == 1.0
+                    PD[k] = 1/2 * x ^ (k + 1.0) * k * (k + 1.0)
+            else
+                PD[k] = (k / (1.0 - x^2)) * (P₁ - x*Pf)
+            
+            P₀ = P₁
+            P₁ = Pf
+            end
         end
 
         return PN, PD
-
 end

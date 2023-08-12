@@ -1,7 +1,6 @@
 # here is some space where we can enter in our tests, so that we can ensure functions from the modules have their proper "scope"
 # if we start a brand new Julia REPL (Alt + J, Alt + R) then we can see that the function is not defined. That's because we didn't EXPORT the function from its code
-using SpecialFxns 
-using Test
+using SpecialFxns, Test
 
 d_my_fxn(3,1)
 
@@ -19,3 +18,5 @@ SpecialFxns.SPECIAL_FXN() # this function didn't use `export` so we have to call
     @test my_fxn(4,3) == 15
 
 end
+
+legendre_Pn(0.5, 2)
