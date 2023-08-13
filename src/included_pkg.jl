@@ -18,7 +18,7 @@ d_my_fxn(x,y) = ForwardDiff.derivative(x -> my_fxn(x,y), x)
 function legendre_Pn(x::Float64,n::Int)
 
     PN = zeros(1,n) # Legendre polynomial of degree 'n'. Initialize an array of size 1:n
-    PD = zeros(1,n) # Legendre polynomial of degree 'n' derivative. Initialize an array of size 1:n
+    PD = zeros(1,n) # Derivative of the Legendre polynomial of degree 'n' . Initialize an array of size 1:n
 
     PN[1] = 0.0
     PN[2] = x 
@@ -32,7 +32,8 @@ function legendre_Pn(x::Float64,n::Int)
         for k = 2:n
         
             Pf = (2 * k - 1.0) / k * x * P₁(x) - (k - 1.0)/k*P₀(x)
-        PN[k] = Pf
+            
+            PN[k] = Pf
 
             if abs(x) == 1.0
                     PD[k] = 1/2 * x ^ (k + 1.0) * k * (k + 1.0)
